@@ -11,7 +11,7 @@ Hierbei gibt es fünf Hauptbereiche, die behandelt werden:
 
 
 ## Machine Learning Algorithmus
-Der zu entwickelnde Machine Learning Algorithmus soll auf Bildern 10 verschiedene Arten von Fashion erkennen und anschließend ein Resultat ausgeben. Hierbei wird als Input ein 28x28 grayscale Bild und als Output ein integer definiert. Um die Analyse umzusetzen wird ein Image Classifier mit Hilfe von Pytorch entwickelt.  
+Der zu entwickelnde Machine Learning Algorithmus soll auf Bildern 10 verschiedene Arten von Fashion erkennen und anschließend ein Resultat ausgeben. Um die Analyse umzusetzen wird ein Convolutional Neural Network Classifier mit Hilfe von Pytorch entwickelt.  
 
 ## Bilder Stream
 Hierbei wird ein Dataset pickle von Bildern genommen, die in binary, uint8 format abgespeichert werden. Zudem wird ein Websocket Stream gebaut, worüber die Bilder mit 10 Bildern pro Sekunde übertragen werden. Die Idee dahinter ist eine Session starten und stoppen zu können, um die Anzahl der übertragenen Bilder auf beiden Seiten kalkulieren zu können und auf beiden Seiten bereit für die Übertragung zu sein. Zudem sollen die Endresultate wieder zurück geschickt werden können.
@@ -63,38 +63,30 @@ Zusätzlich zu diesem Projekt gibt es Grundprinzipien, die eingehalten werden.
 9. Automatische Überprüfung mittels CI/CD Pipeline
 
 # Beschreibung der Daten
-Als Daten werden Bilder in der Größe 28x28 und in grayscale aus dem <a href="https://github.com/zalandoresearch/fashion-mnist">Fashion-MNIST dataset</a> verwendet.
+Als Daten werden Bilder in der Größe 32x32 und in RGB aus dem <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10 Datensatz</a> verwendet.
 
 ## Labels und Beschreibung
 Hier befindet sich eine Tabelle der Labels und Beschreibungen:
 
 | Label | Description |
 | --- | --- |
-| 0 | T-shirt/top |
-| 1 | Trouser |
-| 2 | Pullover |
-| 3 | Dress |
-| 4 | Coat |
-| 5 | Sandal |
-| 6 | Shirt |
-| 7 | Sneaker |
-| 8 | Bag |
-| 9 | Ankle boot |
+| 0 | airplane |
+| 1 | automobile |
+| 2 | bird |
+| 3 | cat |
+| 4 | deer |
+| 5 | dog |
+| 6 | frog |
+| 7 | horse |
+| 8 | ship |
+| 9 | truck |
 
 ## Daten Beispiele
-Hier ist ein Beispiel dafür, wie die Daten aussehen (*jede Klasse benötigt drei Zeilen*):
+Hier ist ein Beispiel dafür, wie die Daten aussehen:
 
-![](fashion_mnist_examples.png)
-[Bild Quelle](https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/doc/img/b6e79fa2.png)
+![](cifar10_example.png)
+
+[image source](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ## Datensatz Zitat
-Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms. Han Xiao, Kashif Rasul, Roland Vollgraf. [arXiv:1708.07747](http://arxiv.org/abs/1708.07747)
-
-## Lizenz für den Datensatz
-The MIT License (MIT) Copyright © [2017] Zalando SE, https://tech.zalando.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+[Learning Multiple Layers of Features from Tiny Images](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf), Alex Krizhevsky, 2009.
