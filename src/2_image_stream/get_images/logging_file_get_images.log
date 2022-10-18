@@ -1,0 +1,21 @@
+2022-10-18:05:20:53,464 INFO     [get_images.py:166] Test log statement
+2022-10-18:05:20:53,464 INFO     [get_images.py:167] current log file: src/2_image_stream/get_images/logging_file_get_images.log
+2022-10-18:05:20:53,464 INFO     [get_images.py:137] defined classes: ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
+2022-10-18:05:20:53,464 INFO     [get_images.py:138] defined saving folder: dataset_batches_test
+2022-10-18:05:20:53,464 INFO     [get_images.py:139] defined images per batch: 100
+2022-10-18:05:20:53,464 INFO     [get_images.py:111] started the complete function
+2022-10-18:05:20:53,464 INFO     [get_images.py:32] started download dataset
+2022-10-18:05:20:53,465 INFO     [get_images.py:35] download dataset created folder: src/2_image_stream/get_images/dataset_batches_test
+2022-10-18:05:21:28,511 INFO     [get_images.py:37] downloaded dataset
+2022-10-18:05:21:28,511 INFO     [get_images.py:40] created dataset path
+2022-10-18:05:21:28,511 INFO     [get_images.py:53] started extracting batches
+2022-10-18:05:21:29,560 INFO     [get_images.py:56] finished extracting batches
+2022-10-18:05:21:29,561 INFO     [get_images.py:60] started unpack pickles
+2022-10-18:05:21:29,627 INFO     [get_images.py:70] finished unpack pickles and returned data_list
+2022-10-18:05:21:29,627 INFO     [get_images.py:75] started creating folders
+2022-10-18:05:21:29,671 INFO     [get_images.py:85] created all folders
+2022-10-18:05:21:29,671 INFO     [get_images.py:89] started saving files
+2022-10-18:05:21:30,295 INFO     [get_images.py:107] saved all defined files
+2022-10-18:05:21:30,295 INFO     [get_images.py:46] started delete dataset
+2022-10-18:05:21:30,338 INFO     [get_images.py:49] removed downloaded dataset, without the saved images
+2022-10-18:05:21:30,338 INFO     [get_images.py:118] everything is completed
