@@ -1,6 +1,6 @@
 # Image analysis project
 
-The idea behind this project is to have an image stream from which the images and analysis run in parallel (on 2 threads) and in real time. Finally, the final results must be calculated and submitted.
+The idea behind this project is to have an image stream from which the images are coming from and the analysis of the images run in parallel and in real time. Finally, the final results must be calculated and submitted.
 
 There are five main areas that will be covered:
 1. Develop machine learning algorithm
