@@ -1,0 +1,8 @@
+version: '3'
+services:
+  1_image_server:
+    build: ./1_image_server
+    container_name: 1_image_server
+  2_image_sender:
+    build: ./2_image_sender
+    container_name: 2_image_sender
