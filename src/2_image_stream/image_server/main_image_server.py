@@ -19,11 +19,17 @@ def client_left(client, server):
 def message_received(client, server, message):
     """on messages"""
     print(f"Client: {client} send the message: {message}")
-    server.send_message_to_all(f"Client: {client} send the message: {message}")
+    try:
+        server.send_message_to_all(f"Client: {client} send the message: {message}")
+    except BrokenPipeError:
+        print("Client closed the connection")
+        server.server_close()
 
 
 server = WebsocketServer(
-    host="localhost", port=8765, loglevel=websocket_server.logging.INFO
+    host="localhost",
+    port=8765,
+    loglevel=websocket_server.logging.INFO,
 )
 server.set_fn_new_client(new_client)
 server.set_fn_client_left(client_left)
