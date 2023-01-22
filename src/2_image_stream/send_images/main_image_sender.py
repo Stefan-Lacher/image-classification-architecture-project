@@ -1,4 +1,4 @@
-"""this file sends 100 messages to the websocket server"""
+"""this file sends image messages to the websocket server"""
 
 # pylint: disable=C0103, W0621, W0613, W0703, W0603, R0903, C0413, E0401, W1203
 
