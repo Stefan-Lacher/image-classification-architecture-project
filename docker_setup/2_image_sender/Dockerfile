@@ -1,8 +1,8 @@
 FROM python:3.9
 
-COPY src/2_image_stream/send_images /src/2_image_stream/send_images
-WORKDIR /src/2_image_stream/send_images
+COPY src/ica_2_image_stream /src/ica_2_image_stream
+WORKDIR /src/ica_2_image_stream
 
-RUN pip3 install websocket-client==1.4.2
+RUN pip3 install -r requirements_send_images.txt
 
-ENTRYPOINT python3 main_image_sender.py
+ENTRYPOINT python3 send_images/main_image_sender.py
